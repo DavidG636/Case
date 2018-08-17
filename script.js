@@ -2,12 +2,12 @@ $(function() {
   var state;
   var change;
   $(".submitText").click(function() {
-    state = $('input[type=checkbox]').attr('checked');
+    state = $('.slider:before').content;
 
     let textContent = $('#text').val();
     var changedText;
 
-    if (state) {
+    if (state = 'A') {
       change = 'capital';
     }
     else {
@@ -16,7 +16,8 @@ $(function() {
 
     if (change == 'capital') {
       changedText = textContent.toUpperCase();
-      $('#text').val(changedText);
+      $('#text').val(changedText)
+      $('#text').effect('bounce', 'fast');
     }
   });
 });
