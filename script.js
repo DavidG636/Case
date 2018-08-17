@@ -2,22 +2,27 @@ $(function() {
   var state;
   var change;
   $(".submitText").click(function() {
-    state = $('.slider:before').content;
+    state = $('.slider').css('background-color');
+    state = new String (state);
+    console.log(state);
 
     let textContent = $('#text').val();
     var changedText;
 
-    if (state = 'A') {
+    if (state = 'rgb(42, 185, 52)') {
       change = 'capital';
-    }
-    else {
+    } else if (state == "rgb(202, 34, 34)") {
       change = 'lower';
     }
 
     if (change == 'capital') {
       changedText = textContent.toUpperCase();
       $('#text').val(changedText)
-      $('#text').effect('bounce', 'fast');
+
+    }
+    else if (change = 'lower'){
+      changedText = textContent.toLowerCase();
+      $('#text').val(changedText)
     }
   });
 });
