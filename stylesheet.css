@@ -61,10 +61,6 @@ textarea {
   transition: .4s;
 }
 
-/* .slider:after {
-  content:"Uppercase";
-} */
-
 input:checked + .slider {
   background-color: #2ab934;
 }
@@ -102,4 +98,8 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+h1 {
+  text-align:center;
 }
